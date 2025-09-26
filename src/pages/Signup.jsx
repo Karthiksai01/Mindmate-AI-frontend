@@ -10,7 +10,7 @@ function Signup() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/auth/signup", form);
+      await axios.post("https://mindmate-ai-backend.onrender.com/api/auth/signup", form);
       navigate("/login");
     } catch (err) {
       setError(err.response?.data?.error || "Signup failed");
